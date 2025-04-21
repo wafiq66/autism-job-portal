@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     "document", #model app
     "employerQuestion",#model app
     "applicantAnswer",#model app
+    "registerAccount", #function app
+    "loginAccount", #function app
+    "searchJob", #function app
 
 ]
 

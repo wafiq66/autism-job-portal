@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Registration</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    {% for message in messages %}
+        {% if message.tags == 'success' %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div><br>
+        {% elif message.tags == 'error' %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div><br>
+        {% else %}
+            <div class="alert alert-info">
+                {{ message }}
+            </div><br>
+        {% endif %}
+    {% endfor %}
+    
+    <form action="{% url 'register_applicant'%}" method="post">
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="email" name="email"> <br>
+        <label for="first-name">First Name:</label>
+        <input type="text" name="first-name"> <br>
+        <label for="last-name">Last Name:</label>
+        <input type="text" name="last-name"> <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password"> <br>
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" name="confirm-password"> <br>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
