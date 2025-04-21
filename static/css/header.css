@@ -1,0 +1,46 @@
+header{
+    background-color: #FFF2F2;
+    padding: 5px 10px;
+}
+
+
+header .part a{
+    color: #000000;
+    text-decoration: none;
+    padding: 0px 10px;
+
+}
+
+#dropdownMenuButton:hover,
+header .part a:hover,
+header .part a:focus{
+    color: #1485b9;
+    cursor: pointer;
+}
+
+#switching{
+    color: #1485b9;
+}
+
+#switching:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dropdown-menu .dropdown-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+  
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    background-color: #f5f5f5;  /* light grey bg on hover */
+    color: #212529;             /* dark text on hover */
+    cursor: pointer;            /* ensure pointer cursor */
+  }
+  
